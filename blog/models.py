@@ -17,7 +17,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-
+    #def means a function and publish is the name of the method
     def publish(self):
         self.published_date = timezone.now()
         self.save()
